@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create New Account</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="createstyle.css">
+</head>
+
+<body>
+    <form>
+        <h2>Create New Account</h2>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit">Create Account</button>
+    </form>
+</body>
+<script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const name = form.querySelector('#name').value;
+        const email = form.querySelector('#email').value;
+        const password = form.querySelector('#password').value;
+        const confirmPassword = form.querySelector('#confirm-password').value;
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match');
+            return;
+        }
+        else{
+        localStorage.setItem("varemail", email);
+        localStorage.setItem("varname", name);
+        localStorage.setItem("varpass", password);
+        alert(`Account for ${name} created successfully`);
+
+        // Redirect user to login page
+        window.location.href = 'index.html';
+        }});
+</script>
+</html>

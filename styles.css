@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #f8f8f8;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	background-image: url("data:image/jpeg;base64,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");
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 20px;
+	color: #fff;
+	text-shadow: 2px 2px 4px rgba(0,0,0,10);
+}
+
+form {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 30px;
+	border-radius: 10px;
+	max-width: 400px;
+	margin: 0 auto;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+label {
+	display: block;
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+input[type=email], input[type=password] {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+	font-size: 1.2rem;
+	width: 100%;
+}
+
+button {
+	background-color: #ff9800;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	transition: background-color 0.2s ease;
+}
+
+button:hover {
+	background-color: green;
+}
+
+p {
+	font-size: 1.2rem;
+	margin-top: 20px;
+	color: yellow;
+	text-align: center;
+}
+
+a {
+	color: greenyellow;
+	text-decoration: none;
+}
+
+.box {
+    border: 1px solid black; 
+    background-color: black; 
+    padding: 10px; 
+  }
+  
+  
